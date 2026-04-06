@@ -1,60 +1,219 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<web-app version="3.1" xmlns="http://xmlns.jcp.org/xml/ns/javaee" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee http://xmlns.jcp.org/xml/ns/javaee/web-app_3_1.xsd">
+<web-app version="3.1" 
+         xmlns="http://xmlns.jcp.org/xml/ns/javaee" 
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+         xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee 
+         http://xmlns.jcp.org/xml/ns/javaee/web-app_3_1.xsd">
+    
+    <display-name>RentWise - Car Rental System</display-name>
+    
+    <!-- ========================================
+         WELCOME FILES (Homepage)
+         ======================================== -->
+    <welcome-file-list>
+        <welcome-file>index.html</welcome-file>
+        <welcome-file>Home.jsp</welcome-file>
+    </welcome-file-list>
+
+    <!-- ========================================
+         JSP SERVLET CONFIGURATION
+         ======================================== -->
     <servlet>
-        <servlet-name>ManageCarServlet</servlet-name>
-        <servlet-class>AddCarServlet</servlet-class>
+        <servlet-name>jsp</servlet-name>
+        <servlet-class>org.apache.jasper.servlet.JspServlet</servlet-class>
+        <init-param>
+            <param-name>logVerbosityLevel</param-name>
+            <param-value>DEBUG</param-value>
+        </init-param>
+        <load-on-startup>3</load-on-startup>
     </servlet>
+    <servlet-mapping>
+        <servlet-name>jsp</servlet-name>
+        <url-pattern>*.jsp</url-pattern>
+    </servlet-mapping>
+
+    <!-- ========================================
+         AUTHENTICATION SERVLETS
+         ======================================== -->
     <servlet>
-        <servlet-name>UpdateCarServlet</servlet-name>
-        <servlet-class>UpdateCarServlet</servlet-class>
+        <servlet-name>LoginServlet</servlet-name>
+        <servlet-class>LoginServlet</servlet-class>
     </servlet>
+    <servlet-mapping>
+        <servlet-name>LoginServlet</servlet-name>
+        <url-pattern>/LoginServlet</url-pattern>
+    </servlet-mapping>
+
     <servlet>
-        <servlet-name>RegisterStaffServlet</servlet-name>
-        <servlet-class>RegisterStaffServlet</servlet-class>
+        <servlet-name>RegisterServlet</servlet-name>
+        <servlet-class>RegisterServlet</servlet-class>
     </servlet>
+    <servlet-mapping>
+        <servlet-name>RegisterServlet</servlet-name>
+        <url-pattern>/RegisterServlet</url-pattern>
+    </servlet-mapping>
+
+    <!-- ========================================
+         BOOKING SERVLETS
+         ======================================== -->
     <servlet>
-        <servlet-name>DeleteCarServlet</servlet-name>
-        <servlet-class>DeleteCarServlet</servlet-class>
+        <servlet-name>BookCarServlet</servlet-name>
+        <servlet-class>BookCarServlet</servlet-class>
     </servlet>
+    <servlet-mapping>
+        <servlet-name>BookCarServlet</servlet-name>
+        <url-pattern>/bookCar</url-pattern>
+    </servlet-mapping>
+
     <servlet>
-        <servlet-name>ProfileServlet</servlet-name>
-        <servlet-class>ProfileServlet</servlet-class>
+        <servlet-name>ModifyDateServlet</servlet-name>
+        <servlet-class>ModifyDateServlet</servlet-class>
     </servlet>
+    <servlet-mapping>
+        <servlet-name>ModifyDateServlet</servlet-name>
+        <url-pattern>/ModifyDateServlet</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <servlet-name>cancelBookingServlet</servlet-name>
+        <servlet-class>cancelBookingServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>cancelBookingServlet</servlet-name>
+        <url-pattern>/cancelBookingServlet</url-pattern>
+    </servlet-mapping>
+
+    <!-- ========================================
+         PAYMENT SERVLETS
+         ======================================== -->
+    <servlet>
+        <servlet-name>PaymentCallback</servlet-name>
+        <servlet-class>PaymentCallback</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>PaymentCallback</servlet-name>
+        <url-pattern>/PaymentCallbackServlet</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <servlet-name>processPaymentServlet</servlet-name>
+        <servlet-class>processPaymentServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>processPaymentServlet</servlet-name>
+        <url-pattern>/processPaymentServlet</url-pattern>
+    </servlet-mapping>
+
     <servlet>
         <servlet-name>UpdatePaymentStatusServlet</servlet-name>
         <servlet-class>UpdatePaymentStatusServlet</servlet-class>
     </servlet>
     <servlet-mapping>
-        <servlet-name>ManageCarServlet</servlet-name>
-        <url-pattern>/ManageCarServlet</url-pattern>
+        <servlet-name>UpdatePaymentStatusServlet</servlet-name>
+        <url-pattern>/UpdatePaymentStatusServlet</url-pattern>
     </servlet-mapping>
+
+    <!-- ========================================
+         CAR MANAGEMENT SERVLETS
+         ======================================== -->
+    <servlet>
+        <servlet-name>AddCarServlet</servlet-name>
+        <servlet-class>AddCarServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>AddCarServlet</servlet-name>
+        <url-pattern>/AddCarServlet</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <servlet-name>UpdateCarServlet</servlet-name>
+        <servlet-class>UpdateCarServlet</servlet-class>
+    </servlet>
     <servlet-mapping>
         <servlet-name>UpdateCarServlet</servlet-name>
         <url-pattern>/UpdateCarServlet</url-pattern>
     </servlet-mapping>
-    <servlet-mapping>
-        <servlet-name>RegisterServlet</servlet-name>
-        <url-pattern>/RegisterServlet</url-pattern>
-    </servlet-mapping>
-    <servlet-mapping>
-        <servlet-name>RegisterStaffServlet</servlet-name>
-        <url-pattern>/RegisterStaffServlet</url-pattern>
-    </servlet-mapping>
+
+    <servlet>
+        <servlet-name>DeleteCarServlet</servlet-name>
+        <servlet-class>DeleteCarServlet</servlet-class>
+    </servlet>
     <servlet-mapping>
         <servlet-name>DeleteCarServlet</servlet-name>
         <url-pattern>/DeleteCarServlet</url-pattern>
     </servlet-mapping>
+
+    <!-- ========================================
+         RETURN CAR SERVLETS
+         ======================================== -->
+    <servlet>
+        <servlet-name>ReturnCarServlet</servlet-name>
+        <servlet-class>ReturnCarServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>ReturnCarServlet</servlet-name>
+        <url-pattern>/ReturnCarServlet</url-pattern>
+    </servlet-mapping>
+
+    <!-- ========================================
+         STAFF SERVLETS
+         ======================================== -->
+    <servlet>
+        <servlet-name>RegisterStaffServlet</servlet-name>
+        <servlet-class>RegisterStaffServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>RegisterStaffServlet</servlet-name>
+        <url-pattern>/RegisterStaffServlet</url-pattern>
+    </servlet-mapping>
+
+    <!-- ========================================
+         PROFILE & USER SERVLETS
+         ======================================== -->
+    <servlet>
+        <servlet-name>ProfileServlet</servlet-name>
+        <servlet-class>ProfileServlet</servlet-class>
+    </servlet>
     <servlet-mapping>
         <servlet-name>ProfileServlet</servlet-name>
         <url-pattern>/ProfileServlet</url-pattern>
     </servlet-mapping>
+
+    <servlet>
+        <servlet-name>OrderHistoryServlet</servlet-name>
+        <servlet-class>OrderHistoryServlet</servlet-class>
+    </servlet>
     <servlet-mapping>
-        <servlet-name>UpdatePaymentStatusServlet</servlet-name>
-        <url-pattern>/UpdatePaymentStatusServlet</url-pattern>
+        <servlet-name>OrderHistoryServlet</servlet-name>
+        <url-pattern>/OrderHistoryServlet</url-pattern>
     </servlet-mapping>
+
+    <!-- ========================================
+         SESSION CONFIGURATION
+         ======================================== -->
     <session-config>
-        <session-timeout>
-            30
-        </session-timeout>
+        <session-timeout>30</session-timeout>
     </session-config>
+
+    <!-- ========================================
+         ERROR PAGES
+         ======================================== -->
+    <error-page>
+        <error-code>404</error-code>
+        <location>/error.jsp</location>
+    </error-page>
+
+    <error-page>
+        <error-code>500</error-code>
+        <location>/error.jsp</location>
+    </error-page>
+
+    <!-- ========================================
+         MIME TYPES
+         ======================================== -->
+    <mime-mapping>
+        <extension>jsp</extension>
+        <mime-type>text/jsp</mime-type>
+    </mime-mapping>
+
 </web-app>
