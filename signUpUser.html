@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" type="image/x-icon" href="asset/RentWiseFavIcon.svg">
+    <title>RentWise | Sign In</title>
+    <link rel="stylesheet" href="css/signUpUser.css" />
+    <script src="https://kit.fontawesome.com/64d58efce2.js" crossorigin="anonymous"></script>
+    <script>
+      function validateForm(event) {
+        // Get form fields
+        var studentId = document.forms["signUpForm"]["student_id"].value;
+        var studentName = document.forms["signUpForm"]["student_name"].value;
+        var studentEmail = document.forms["signUpForm"]["student_email"].value;
+        var studentContact = document.forms["signUpForm"]["student_contact"].value;
+        var studentPassword = document.forms["signUpForm"]["student_password"].value;
+
+        // Check if any field is empty
+        if (studentId == "" || studentName == "" || studentEmail == "" || studentContact == "" || studentPassword == "") {
+          alert("All fields must be filled out");
+          return false;
+        } else {
+          alert("Register successful!");
+          return true;
+        }
+      }
+    </script>
+  </head>
+  <body>
+    <div class="container">
+      <form name="signUpForm" action="RegisterServlet" method="post" class="sign-up-form" onsubmit="return validateForm(event)">
+        <h2 class="title">Sign Up</h2>
+        <div class="input-field">
+          <i class="fa fa-id-badge" aria-hidden="true"></i>
+          <input type="text" name="student_id" placeholder="Student ID"  />
+        </div>
+        <div class="input-field">
+          <i class="fas fa-user"></i>
+          <input type="text" name="student_name" placeholder="Full Name"  />
+        </div>
+        <div class="input-field">
+          <i class="fa fa-envelope" aria-hidden="true"></i>
+          <input type="email" name="student_email" placeholder="Email"  />
+        </div>
+        <div class="input-field">
+          <i class="fa fa-phone" aria-hidden="true"></i>
+          <input type="text" name="student_contact" placeholder="Phone No."  />
+        </div>
+        <div class="input-field">
+          <i class="fas fa-lock"></i>
+          <input type="password" name="student_password" placeholder="Password"  />
+        </div>
+        <input type="submit" value="Register" class="btn solid" />
+        <p>Or</p>
+        <div class="hori-line"></div>
+        <p class="carOwner-link">Want to rent out your car ? <a href="">Register here</a></p>
+      </form>
+    </div>
+  </body>
+</html>
