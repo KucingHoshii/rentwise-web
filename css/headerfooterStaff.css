@@ -1,0 +1,163 @@
+/*
+Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
+Click nbfs://nbhost/SystemFileSystem/Templates/JSP_Servlet/CascadeStyleSheet.css to edit this template
+*/
+/* 
+    Created on : 30 Jun 2024, 4:31:48 PM
+    Author     : user
+*/
+
+:root {
+            --primary-color: #ff6a00;
+            --background-color: #EEF7FF;
+        }
+
+        html {
+            background-color: var(--background-color);
+            font-family: 'Poppins', sans-serif;
+            font-weight: 500;
+            scroll-behavior: smooth;
+            overflow-x: hidden;
+        }
+
+        /*Top Navigation*/
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 5px 20px;
+            background-color: #fff;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+
+        .nav-logo {
+            width: 70px;
+            height: 70px;
+            cursor: pointer;
+        }
+
+        .nav-bar {
+            display: flex;
+            list-style: none;
+            gap: 2.3em;
+            margin: 0;
+            padding: 0;
+            z-index: 10;
+        }
+
+        .nav-bar li a {
+            text-decoration: none;
+            font-size: 19px;
+            color: black;
+        }
+
+        .nav-bar li a:hover {
+            color: var(--primary-color);
+            transition: all ease 0.3s;
+        }
+        .nav-button a.button {
+            display: inline-block;
+            padding: 10px 20px;
+            margin: 5px;
+            background-color: grey;
+            opacity: 70%;
+            color: white;
+            text-decoration: none;
+            border-radius: 5px;
+            text-align: center;
+            font-weight: 500;
+        }
+
+        .nav-button a.button1 {
+            display: inline-block;
+            padding: 10px 20px;
+            margin: 5px;
+            background-color: transparent;
+            color: black;
+            text-decoration: none;
+            text-align: center;
+            font-weight: 500;
+        }
+
+        .nav-button a.button:hover {
+            background-color: var(--primary-color);
+            color: white;
+            opacity: 100%;
+            transition: all ease 0.3s;
+        }
+
+        .nav-button a.button1:hover {
+            color: white;
+            background-color: var(--primary-color);
+            border-radius: 5px;
+            transition: all ease 0.3s;
+        }
+
+        /* Content */
+        .container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding: 2em;
+            gap: 2em;
+        }
+
+        .heading {
+            font-size: 2.5em;
+            text-align: center;
+        }
+
+        .content {
+            text-align: center;
+        }
+
+        .owner-actions {
+            display: flex;
+            justify-content: center;
+            gap: 1em;
+            flex-wrap: wrap;
+        }
+
+        .owner-action {
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            text-align: center;
+            transition: transform 0.3s ease;
+            width: 250px;
+            text-decoration: none;
+            color: inherit;
+        }
+
+        .owner-action:hover {
+            transform: translateY(-5px);
+        }
+
+        .owner-action img {
+            width: 100px;
+            height: 100px;
+            margin-bottom: 10px;
+        }
+
+        .owner-action h3 {
+            font-size: 1.2em;
+            margin-bottom: 5px;
+        }
+
+        .owner-action a {
+            text-decoration: none;
+            color: inherit;
+        }
+
+        /*Footer*/
+        footer {
+            width: 100%;
+            background-color: #FF5F00;
+            text-align: center;
+            color: white;
+            padding: 0px;
+            position: fixed;
+            bottom: 0;
+            left: 0;
+        }

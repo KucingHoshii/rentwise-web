@@ -1,0 +1,347 @@
+/*
+Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
+Click nbfs://nbhost/SystemFileSystem/Templates/JSP_Servlet/CascadeStyleSheet.css to edit this template
+*/
+/* 
+    Created on : 1 Jun 2024, 9:02:09 am
+    Author     : afiqa
+*/
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap');
+
+:root {
+    --primary-color: #ff6a00;
+    --secondary-color: #007BFF;
+    --background-color: #f9f9f9;
+    --text-color: #333;
+    --border-radius: 5px;
+    --padding: 20px;
+}
+
+body {
+    background-color: var(--background-color);
+    font-family: 'Poppins', sans-serif;
+    font-weight: 400;
+    color: var(--text-color);
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+}
+
+.main-title{
+    margin-top: -15px;
+    padding-left: 50px;
+}
+
+@media (max-width: 863px) {
+    .main-title{
+        padding-left: 25px;
+    }
+}
+
+@media (max-width: 1100px) {
+    .main-title{
+        padding-left: 23px;
+    }
+}
+
+.main-content {
+    width: 90%;
+    margin: 0 auto;
+    padding: var(--padding);
+    background-color: white;
+    border-radius: var(--border-radius);
+    border: 1px solid #ddd;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.reservation-summary {
+    padding: 10px;
+    border-radius: var(--border-radius);
+    background-color: white;
+}
+
+.reservation-header {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    margin-bottom: 20px;
+}
+
+.reservation-dates {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+@media (min-width: 768px) {
+    .reservation-dates {
+        flex-direction: row;
+        gap: 20px;
+    }
+}
+
+.vertLine {
+    border-right: 1px solid black;
+    opacity: 40%;
+    display: none;
+}
+
+@media (min-width: 768px) {
+    .vertLine {
+        display: block;
+    }
+}
+
+.reservation-dates label {
+    display: block;
+    font-weight: bold;
+    color: var(--primary-color);
+    margin-bottom: 5px;
+}
+
+.reservation-dates p {
+    font-size: 16px;
+    color: var(--text-color);
+}
+
+.reservation-actions {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+@media (min-width: 768px) {
+    .reservation-actions {
+        flex-direction: row;
+        flex-wrap: wrap;
+    }
+}
+
+.action-button {
+    display: flex;
+    align-items: center;
+    padding: 10px 15px;
+    border: 1px solid #ccc;
+    background-color: white;
+    color: var(--text-color);
+    cursor: pointer;
+    border-radius: var(--border-radius);
+    transition: background-color 0.3s, border-color 0.3s;
+}
+
+.action-button i {
+    margin-right: 5px;
+}
+
+.action-button:hover {
+    background-color: var(--primary-color);
+    color: white;
+    border-color: var(--primary-color);
+}
+
+.reservation-details {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+@media (min-width: 863px) {
+    .reservation-details {
+        flex-direction: row;
+        justify-content: space-between;
+        flex-wrap: nowrap;
+    }
+}
+
+.car-info, .pricing-info {
+    flex: 1;
+    min-width: 280px;
+}
+
+.car-info h2, .pricing-info h2 {
+    margin-bottom: 10px;
+    color: var(--primary-color);
+}
+
+.car-info img {
+    width: 100%;
+    max-width: 480px;
+    height: auto;
+    border-radius: var(--border-radius);
+}
+
+.pricing-info {
+    margin-top: -150px;
+    border-left: 2px solid #ddd;
+    padding-left: 20px;
+}
+
+@media (max-width: 863px) {
+    .pricing-info {
+        margin-top: -10px;
+        border-left: none;
+        border-top: 2px solid #ddd;
+        padding-left: 0;
+    }
+}
+
+.pricing-item {
+    display: flex;
+    justify-content: space-between;
+    margin: 10px 0;
+    font-size: 16px;
+}
+
+.pricing-item.total {
+    font-weight: 700;
+    font-size: 18px;
+    margin-top: 15px;
+}
+
+.btn-submit {
+    display: flex;
+    justify-content: end;
+    margin-top: 60px;
+}
+
+.Btn {
+    width: 130px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: rgb(15, 15, 15);
+    border: none;
+    color: white;
+    font-weight: 600;
+    gap: 8px;
+    cursor: pointer;
+    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.103);
+    position: relative;
+    overflow: hidden;
+    transition-duration: .3s;
+}
+
+.svgIcon {
+    width: 16px;
+}
+
+.svgIcon path {
+    fill: white;
+}
+
+.Btn::before {
+    width: calc(100% + 40px);
+    aspect-ratio: 1/1;
+    position: absolute;
+    content: "";
+    background-color: white;
+    border-radius: 50%;
+    left: -20px;
+    top: 50%;
+    transform: translate(-150%, -50%);
+    transition-duration: .5s;
+    mix-blend-mode: difference;
+}
+
+.Btn:hover::before {
+    transform: translate(0, -50%);
+}
+
+.Btn:active {
+    transform: translateY(4px);
+    transition-duration: .3s;
+}
+
+.modify-link {
+    font-size: 0.8em;
+    color: var(--secondary-color);
+    text-decoration: none;
+}
+
+.modify-link i {
+    margin-right: 5px;
+}
+
+/*Modal Section*/
+.modal {
+    display: none;
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0,0,0,0.4);
+    justify-content: center;
+    align-items: center;
+    z-index: 15;
+}
+
+.modal-content {
+    background-color: white;
+    margin: 15% auto;
+    padding: 20px;
+    border: 1px solid #888;
+    width: 80%;
+    max-width: 400px;
+    text-align: center;
+    border-radius: var(--border-radius);
+    position: relative;
+}
+
+.close {
+    position: absolute;
+    right: 10px;
+    top: 10px;
+    color: #aaa;
+    font-size: 28px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.close:hover,
+.close:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.alert-gif {
+    width: 100px;
+    margin-bottom: 20px;
+}
+
+.alert-button {
+    background-color: var(--primary-color);
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: var(--border-radius);
+    font-weight: 500;
+    margin: 0 10px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.alert-button:hover {
+    background-color: darkred;
+}
+
+@media (max-width: 768px) {
+    .reservation-actions {
+        flex-direction: column;
+        align-items: stretch;
+    }
+    
+    .reservation-details {
+        flex-direction: column;
+    }
+    
+    .btn-submit {
+        justify-content: center;
+    }
+}
+
+

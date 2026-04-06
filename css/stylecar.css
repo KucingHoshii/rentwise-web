@@ -1,0 +1,143 @@
+:root {
+    --primary-color: #ff6a00;
+    --background-color: #EEF7FF;
+}
+
+html {
+    background-color: var(--background-color);
+    font-family: 'Poppins', sans-serif;
+    font-weight: 500;
+    scroll-behavior: smooth;
+    overflow-x: hidden;
+}
+
+/*Top Navigation*/
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 5px 20px;
+}
+
+.nav-logo {
+    width: 70px;
+    height: 70px;
+    cursor: pointer;
+}
+
+.nav-bar {
+    display: flex;
+    list-style: none;
+    gap: 2.3em;
+    margin: 0;
+    padding: 0;
+    z-index: 10;
+}
+
+.nav-bar li a {
+    text-decoration: none;
+    font-size: 19px;
+    color: black;
+}
+
+.nav-bar li a:hover {
+    color: var(--primary-color);
+    transition: all ease 0.3s;
+}
+
+.nav-button {
+    z-index: 10;
+}
+
+.nav-button a.button {
+    display: inline-block;
+    padding: 10px 20px;
+    margin: 5px;
+    background-color: grey;
+    opacity: 70%;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    text-align: center;
+    font-weight: 500;
+}
+
+.nav-button a.button1 {
+    display: inline-block;
+    padding: 10px 20px;
+    margin: 5px;
+    background-color: transparent;
+    color: black;
+    text-decoration: none;
+    text-align: center;
+    font-weight: 500;
+}
+
+.nav-button a.button:hover {
+    background-color: var(--primary-color);
+    color: white;
+    opacity: 100%;
+    transition: all ease 0.3s;
+}
+
+.nav-button a.button1:hover {
+    color: white;
+    background-color: var(--primary-color);
+    border-radius: 5px;
+    transition: all ease 0.3s;
+}
+
+/* Content */
+.container {
+    max-width: 800px;
+    margin: 0 auto;
+    margin-top: 20px;
+    background: #fff;
+    padding: 20px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    border-radius: 8px;
+    margin-bottom: 100px; /* Add space at the bottom */
+}
+
+h1 {
+    text-align: center;
+    color: #333;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    margin-top: 20px; /* Add margin to create space between header and form */
+}
+
+label {
+    margin: 10px 0 5px;
+    font-weight: bold;
+}
+
+input[type="text"],
+input[type="number"],
+input[type="file"],
+input[type="submit"] {
+    padding: 10px;
+    margin-bottom: 10px;
+    border-radius: 4px;
+    border: 1px solid #ccc;
+}
+
+input[type="submit"] {
+    background-color: #4CAF50;
+    color: white;
+    cursor: pointer;
+}
+
+input[type="submit"]:hover {
+    background-color: #45a049;
+}
+
+footer {
+    width: 100%;
+    background-color: #FF5F00;
+    text-align: center;
+    padding: 10px 0;
+}

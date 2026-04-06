@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="icon" type="image/x-icon" href="C:\Assignment ASG\CarRentalInUMT\web\images\RentWiseFavIcon.svg">
+        <title>RentWise | Rent Car</title>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+        <link rel="stylesheet" href="css\home.css">
+        <link rel="stylesheet" href="css\basicStyle.css">
+    </head>
+    <script>
+        function submitOrderHistoryForm(event) {
+            event.preventDefault();
+            document.getElementById('orderHistoryForm').submit();
+        }
+    </script>
+    <body>
+        <!-- Nav Bar -->
+        <nav>
+            <img class="nav-logo" src="images/RentWiseLogo.svg" alt="">
+            <ul class="nav-bar">
+                <li><a href="homepage.jsp">Home</a></li>
+                <li><a href="booking.jsp">Rent Car</a></li>
+                <li><a href="#How">How</a></li>
+                <li><a href="#whyUs">About</a></li>
+            </ul>
+            <div class="nav-button">
+                <div class="dropdown">
+                    <button class="dropbtn"><i class="fas fa-user"></i></button>
+                    <div class="dropdown-content">
+                        <a href="profile.jsp">Profile</a>
+                        <form id="orderHistoryForm" action="OrderHistoryServlet" method="post" style="display: none;"></form>
+                        <a href="#" onclick="submitOrderHistoryForm(event)">Order History</a>
+                        <a href="index.html">Log Out</a>
+                    </div>
+                </div>
+            </div>   
+        </nav>
+
+        <!-- Content -->
+        <div class="container">
+            <div class="content">
+                <p class="heading"><b><span>Looking</span> for Cheaper <span>Price</span> to Rent a Car ?</b></p>
+                <p class="sub-heading">RentWise is your solution !</p>
+                <div class="content-button">
+                    <a href="booking.jsp" class="button">Find Car Now</a>
+                </div>        
+            </div>
+        </div>
+
+        <!-- ChooseDate -->
+        <section>
+            <div class="form-container">
+                <form action="viewAvailableCars" method="post">
+                    <div class="input-box">
+                        <span class="form">Pick-Up Date</span>
+                        <input type="date" name="pickup_date" required>
+                    </div>
+                    <div class="input-box">
+                        <span class="form">Time</span>
+                        <input type="time" name="pickup_time" required>
+                    </div>
+                    <div class="input-box">
+                        <span class="form">Return Date</span>
+                        <input type="date" name="return_date" required>
+                    </div>
+                    <div class="input-box">
+                        <span class="form">Time</span>
+                        <input type="time" name="return_time" required>
+                    </div>
+                    <input type="submit" class="btn" value="Find Car">
+                </form>
+            </div>
+        </section>
+
+
+        <!-- How it Works Section -->
+        <div class="how-it-works">
+            <h2 id="How">How It Works</h2>
+            <div class="steps">
+                <div class="step">
+                    <img src="images/search.png" alt="Search">
+                    <h3>Search Cars</h3>
+                    <p>Enter your locations and dates to see available cars.</p>
+                </div>
+                <div class="step">
+                    <img src="images/select.png" alt="Select">
+                    <h3>Select Car</h3>
+                    <p>Choose the car that suits your needs.</p>
+                </div>
+                <div class="step">
+                    <img src="images/booking.png" alt="Book">
+                    <h3>Book Your Car</h3>
+                    <p>Provide your details and confirm the booking.</p>
+                </div>
+                <div class="step">
+                    <img src="images/drive.png" alt="Drive">
+                    <h3>Pick Up and Drive</h3>
+                    <p>Pick up the car and enjoy your ride.</p>
+                </div>
+            </div>
+        </div>
+        <!-- Why Us Section -->
+        <div class="whyUs" id="whyUs">
+            <h2>Why Choose &nbsp;<span>RentWise</span></h2>
+            <div class="content-wrapper">
+                <div class="accordion-container">
+                    <button class="accordion">
+                        Section 1
+                        <div class="downArrow">
+                            <i class="fa fa-angle-up" aria-hidden="true"></i>
+                        </div>
+                    </button>
+                    <div class="panel" style="max-height: none;">
+                        <p>Some text for section 1..</p>
+                    </div>
+                    <button class="accordion">
+                        Section 2
+                        <div class="downArrow">
+                            <i class="fa fa-angle-up" aria-hidden="true"></i>
+                        </div>
+                    </button>
+                    <div class="panel" style="max-height: none;">
+                        <p>Some text for section 2..</p>
+                    </div>
+                </div>
+                <div class="rent-img">
+                    <img src="images/rentCarPic.jpg" alt="Rent Car Picture">
+                </div>
+            </div>
+        </div>
+
+        <!-- Footer Section -->
+        <footer>
+            <section class="footer">
+                <div class="footer-content">
+                    <h3 class="reachUs">Reach Us Here</h3>
+                    <ul class="followUs">
+                        <li><a href="https://www.instagram.com/pixiescreenofficial?igsh=MXYyNHB3OHpnd3BvYw%3D%3D&utm_source=qr" target="_blank"><i class="fab fa-brands fa-instagram"></i></a></li>
+                        <li><a href="https://twitter.com/PixieOfficials" target="_blank"><i class="fab fa-brands fa-twitter"></i></a></li>
+                        <li><a href="https://www.facebook.com/profile.php?id=61555861731834" target="_blank"><i class="fab fa-brands fa-facebook"></i></a></li>
+                        <li><a href="mailto:pixiescreen@gmail.com" target="_blank"><i class="fas fa-regular fa-envelope"></i></a></li>
+                    </ul>
+                </div>
+                <div class="footer-content">
+                    <img src="images/RentWiseLogo.svg" alt="RentWise Logo"/>
+                </div>
+                <p class="copyrightFooter">RentWise is a Registered Company , Inc. Malaysia . We provide a easy way for user to Rent A Car</p>
+                <p class="copyrightFooter">Please read carefully our <a href="termsCondition.jsp" target="_blank" style="text-decoration: none">Terms & Conditions</a> before proceeding</p>
+                <p class="copyrightFooter">Copyright &copy; 2024 RentWise. All rights reserved.</p>
+            </section>
+        </footer>
+
+        <script>
+            var acc = document.getElementsByClassName("accordion");
+            var i;
+
+            for (i = 0; i < acc.length; i++) {
+              acc[i].addEventListener("click", function() {
+                this.classList.toggle("active");
+                var panel = this.nextElementSibling;
+                if (panel.style.maxHeight){
+                  panel.style.maxHeight = null;
+                } else {
+                  panel.style.maxHeight = panel.scrollHeight + "px";
+                } 
+              });
+            }
+            </script>
+    </body>
+</html>

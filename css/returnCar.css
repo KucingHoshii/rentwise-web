@@ -1,0 +1,191 @@
+/*
+Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
+Click nbfs://nbhost/SystemFileSystem/Templates/JSP_Servlet/CascadeStyleSheet.css to edit this template
+*/
+/* 
+    Created on : 30 Jun 2024, 4:07:42 PM
+    Author     : user
+*/
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+:root{
+    --primary-color: #ff6a00;
+    --background-color : white;
+}
+
+html {
+    background-color: var(--background-color);
+    font-family: 'Poppins', sans-serif;
+    font-weight: 500;
+    scroll-behavior: smooth;
+    overflow-x: hidden;
+}
+
+body {
+    font-family: 'Poppins', Arial, sans-serif;
+    background-color: #fff;
+    display: flex;
+    justify-content: center;
+    margin: 0;
+    flex-direction: column;
+}
+
+header {
+    background-color: #fff; /* Optional background color */
+    padding: 10px;
+}
+
+.container {
+    width: 85%; /* Adjust container width as needed */
+    margin: 30px auto; /* Center the container */
+    margin-top: -30px;
+    border-radius: 5px;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+}
+
+h1 {
+    padding-top: 0px;
+    text-align: center;
+}
+
+form {
+    background: #c3c4cc;
+    padding: 25px;
+    border-radius: 10px;
+    box-shadow: rgba(0, 0, 0, 0.25) 0px 14px 28px, rgba(0, 0, 0, 0.22) 0px 10px 10px;
+    width: 100%;
+    max-width: 700px;
+    color: #000;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.form-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin-top: 20px; /* Add margin to create space between the forms */
+}
+
+.form-group {
+    flex: 1 1 calc(50% - 10px); /* Set each form group to take up 50% of the container width minus margin */
+    margin: 5px; /* Adjust margin for spacing between form groups */
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 5px;
+}
+
+.form-group.inline-group {
+    flex: 1 1 100%;
+}
+
+.radio-group {
+    display: flex;
+    margin-left: 10px;
+    align-items: center;
+    justify-content: center;
+}
+
+.radio-group label {
+    margin-right: 10px;
+    display: flex;
+    align-items: center;
+}
+
+.radio-group label input {
+    margin-right: 5px;
+}
+
+.form-group input,
+.form-group textarea {
+    font-family: 'Poppins', sans-serif;
+    width: 100%; /* Adjust width to fill the available space */
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    box-sizing: border-box;
+    color: #000;
+    text-align: center;
+}
+
+textarea {
+    resize: vertical;
+    font-family: 'Poppins', sans-serif;
+}
+
+.form-buttons {
+    display: flex;
+    justify-content: center; /* Center-align buttons */
+    gap: 10px; /* Add space between the buttons */
+    margin: auto;
+}
+
+input[type="submit"],
+input[type="reset"] {
+    font-family: 'Poppins', sans-serif;
+    background-color: #474fa0;
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+input[type="submit"]:hover,
+input[type="reset"]:hover {
+    background-color: #0067b3;
+}
+
+.confirmation {
+    background: #c3c4cc;
+    padding: 20px;
+    max-width: 600px;
+    margin: 30px auto;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+.confirmation p {
+    margin: 10px 0;
+    color: #000;
+    display:inline-block;
+}
+
+.confirmation h1 {
+    margin-bottom: 20px;
+    color: #333;
+}
+
+
+.email-subscription {
+  font-family: 'Poppins', sans-serif;
+  display: inline-block;
+  gap: 10px;
+  width:100%;
+}
+
+.email-subscription input[type="text"] {
+  padding: 10px;
+  border: 1px solid #fff;
+  border-radius: 5px;
+  background-color: #333;
+  color: #fff;
+  width: 100%;
+}
+
+.email-subscription button[type="button"] {
+    background: #fff;
+    outline: none;
+    border: none;
+    padding: 10px 15px;
+    border-radius: 6px;
+    cursor: pointer;
+    font-weight: 500;
+    transition: 0.2s ease;
+}
