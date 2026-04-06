@@ -33,6 +33,10 @@
         <url-pattern>/UpdateCarServlet</url-pattern>
     </servlet-mapping>
     <servlet-mapping>
+        <servlet-name>RegisterServlet</servlet-name>
+        <url-pattern>/RegisterServlet</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
         <servlet-name>RegisterStaffServlet</servlet-name>
         <url-pattern>/RegisterStaffServlet</url-pattern>
     </servlet-mapping>
